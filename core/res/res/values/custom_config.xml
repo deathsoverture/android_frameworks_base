@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Package name providing WebView implementation. (Google Prebuilt) -->
+    <string name="config_prebuiltWebViewPackageName" translatable="false">com.google.android.webview</string>
+</resources>
