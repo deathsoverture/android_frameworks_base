@@ -488,6 +488,15 @@ public class GestureDetector {
      *              else false.
      */
     public boolean onTouchEvent(MotionEvent ev) {
+        switch(ev.getAction() & MotionEvent.ACTION_MASK) {
+        case MotionEvent.ACTION_HOVER_MOVE:
+        case MotionEvent.ACTION_HOVER_ENTER:
+        case MotionEvent.ACTION_HOVER_EXIT:
+        case MotionEvent.ACTION_BUTTON_PRESS:
+        case MotionEvent.ACTION_BUTTON_RELEASE:
+        case MotionEvent.ACTION_SCROLL:
+            return false;
+        }
         if (mInputEventConsistencyVerifier != null) {
             mInputEventConsistencyVerifier.onTouchEvent(ev, 0);
         }
